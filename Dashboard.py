@@ -165,10 +165,10 @@ if option == "View model effectiveness":
         st.markdown("<h2 style='text-align: center'>Confusion Matrix</h2>", unsafe_allow_html=True)
         st.markdown("<p style='text-align: center'>Random Forest</p>", unsafe_allow_html=True)
         matrix_rf = confusion_matrix(data['sars_cov_2_exam_result'].to_numpy(),y_rf)
-        st.dataframe(pd.DataFrame(matrix_rf,columns=["clasified as positive","clasified as negative"],index=["positive","negative"]),width=700)
+        st.dataframe(pd.DataFrame(matrix_rf,columns=["clasified as negative","clasified as positive"],index=["negative","positive"]),width=700)
         st.markdown("<p style='text-align: center'>Neural Network</p>", unsafe_allow_html=True)
         matrix_nn = confusion_matrix(data['sars_cov_2_exam_result'].to_numpy(),y_nn)
-        st.dataframe(pd.DataFrame(matrix_nn,columns=["clasified as positive","clasified as negative"],index=["positive","negative"]),width=700)
+        st.dataframe(pd.DataFrame(matrix_nn,columns=["clasified as negative","clasified as positive"],index=["negative","positive"]),width=700)
         st.markdown("<h2 style='text-align: center'>Pie Chart</h2>", unsafe_allow_html=True)
         
         fig = plt.figure(figsize=(12,5))
