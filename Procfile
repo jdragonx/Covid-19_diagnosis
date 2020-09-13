@@ -1,1 +1,1 @@
-web: streamlit run Dashboard.py
+web: stup.sh && streamlit run Dashboard.py
